@@ -1,0 +1,301 @@
+/*
+ Theme Name:   Aadya for Lyra
+ Description:  Child theme created for Lyra
+ Author:       Amy Dalrymple
+ Author URI:   http://amydalrymple.org
+ Template:     aadya
+ Version:      1.0.0
+ Text Domain:  aadya-child-for-lyra
+*/
+
+/*
+For older themes, and themes that do not use wp_enqueue_style() to enqueue their stylesheet, use the following line where twentyfourteen is the name of the directory where the theme resides:
+
+Make sure you uncomment out this import line below if you want to include the parent CSS and the wp_enqueue_style() is not working. If you do not then you will not have any styling in your child theme from the parent theme.
+*/
+
+@import url("../aadya/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+/*
+http://www.colorcombos.com/combotester.html?color0=A3231D&color1=485C5A&color2=8C9C9A&color3=9DB2B1&color4=BFCFCC&color5=D6E4E1&color6=1D88A3&color7=&color8=080808
+
+Hex1	#a3231d (red)
+Hex2	#485c5a
+Hex3	#8c9c9a
+Hex4	#9db2b1
+Hex5	#bfcfcc
+Hex6	#d6e4e1
+Hex7	#1d88a3 (bright blue)
+Hex8	#fff
+Hex9	#080808 (dark, almost black)
+
+Body text: 2 (or #333 if the other isn't dark enough)	#485C5A
+Rollover link color: 7			#1D88A3
+Same color for in-text links	#1D88A3
+In-text links rollover: 3		#8C9C9A
+Menu item text: 6				#D6E4E1
+Menu rollover text color: white	#ffffff
+
+Schubert club's site (http://schubert.org/) -- what they did with the link colors, comparing the use of the gold
+color in their recent announcements section to their menu selection -- being used in two different ways, but it seems to make sense -- **I'd like to use the Hex7 blue (#1D88A3) in that same way.
+
+Button color: Hex1 (#A3231D)  (unless red is a warning color...? in which case we might **flip the roles of 7 and 1)
+Button text color: 6 (#D6E4E1) or white, whichever is best on the eyes
+
+Rollover button: change opacity - is that an option? If so, the inactive button could be hex1 at reduced opacity, and rollover could bring it to 100, or vice versa
+
+Is the menu bar fixed down below the logo, or is it possible it could be moved up to the top. Back to the Schubert Club website, since I know Tami liked that one, what would it take to make that top area (logo + navigation) fixed? Probably changing themes. :) Bottom line is that the menu gets a little lost at the moment, at least for the older eyes in our audience, so whatever we can do to draw a bit of attention to it is good.
+
+Georgia, Verdana, Arial, Times, serif for body text. I know Georgia is a bit on the large side, so maybe 11 pt?
+for headline: Arial, "Trebuchet MS", Trebuchet, Verdana, sans serif. Bold. 14 pt big enough?
+
+2 websites that I think have great ideas for ours:
+Red Cross <http://www.redcross.org/> (big budget :)
+Early Music Vancouver <http://www.earlymusic.bc.ca/> (probably more comparable to our resource level - I particularly like their dropdowns)
+*/
+
+body {
+	color: #485c5a;
+	font-family: Georgia, Times, serif;
+}
+
+/* fonts */
+h1, h2, h3, h4, h5, h6, .blurb span {
+	font-family: Arial, "Trebuchet MS", Trebuchet, Verdana, sans serif;
+	font-weight: bold;
+}
+
+#main-container {
+	font-size: 17px;
+}
+
+.read-more {
+	display: block;
+}
+
+/* links */
+a, a:visited {
+	color: #1d88a3;
+}
+a:hover, a:active {
+	color: #8c9c9a;
+}
+
+/* buttons */
+.btn-primary, .blurb a.btn-buy, .btn {
+	background-color: #A3231D;
+	border-color: transparent;
+	color: #d6e4e1;
+	font-family: Arial, "Trebuchet MS", Trebuchet, Verdana, sans serif;
+	text-transform: none;
+}
+.btn-primary:hover, .btn-primary:active, .blurb a.btn-buy:hover {
+	background-color: #1d88a3;
+}
+
+.btn-xs {
+	padding: 5px 10px;
+	font-size: 1em;
+}
+
+/* header */
+.navbar {
+	background-color: #fff;
+}
+
+.navbar-toggle {
+	border: 2px solid #485c5a;
+	margin-bottom: 0;
+}
+.navbar-toggle:hover {
+	background: #1d88a3;
+	color: #fff;
+}
+.navbar-toggle .icon-bar {
+	background-color: #485c5a;
+}
+.navbar-toggle:hover .icon-bar {
+	background-color: #fff;
+}
+
+header .col-md-4:last-child {
+	width: 66.6666%;
+}
+
+header .social-icon-box-inner {
+	text-align: right;
+}
+header .social-icon-box-inner a, header .social-icon-box-inner a:visited {
+	color: #fff;
+}
+
+.header-widget {
+	display: block !important;
+}
+
+.header-widget.widget_search {
+	max-width: 200px;
+	margin: 0 0 0 auto;
+}
+
+.header-widget ul.menu {
+	margin: 10px 0;
+}
+
+.header-widget ul.menu li {
+	display: inline-block;	
+}
+.header-widget ul.menu > li a {
+	background-color: #bfcfcc;
+	color: #485c5a;
+	padding: 5px 8px;
+}
+.header-widget ul.menu > li a:hover {
+	color: #fff;
+}
+
+/* menus */
+.navbar-wrapper .navbar .current-menu-item {
+	background-color: #EBEBEB;
+}
+.navbar-wrapper .navbar a {
+	color: #485c5a;
+}
+.navbar-wrapper .navbar a:hover, .navbar-wrapper .navbar a:active {
+	color: #fff;
+	background-color: #1d88a3;
+}
+
+.menu-item {
+	text-transform: uppercase;
+	font-family: Arial, "Trebuchet MS", Trebuchet, Verdana, sans serif;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+	background-color: #d6e4e1;
+}
+
+/* front page slider */
+.carousel-control.left {
+	background: -moz-linear-gradient(left,  rgba(72,92,90,1) 0%, rgba(214,228,225,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(72,92,90,1)), color-stop(100%,rgba(214,228,225,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(72,92,90,1) 0%,rgba(214,228,225,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(72,92,90,1) 0%,rgba(214,228,225,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(72,92,90,1) 0%,rgba(214,228,225,0) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(72,92,90,1) 0%,rgba(214,228,225,0) 100%); /* W3C */
+}
+.carousel-control.right {
+	background: -moz-linear-gradient(left,  rgba(214,228,225,0) 0%, rgba(72,92,90,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(214,228,225,0)), color-stop(100%,rgba(72,92,90,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(214,228,225,0) 0%,rgba(72,92,90,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(214,228,225,0) 0%,rgba(72,92,90,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(214,228,225,0) 0%,rgba(72,92,90,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(214,228,225,0) 0%,rgba(72,92,90,1) 100%); /* W3C */
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	margin: 0 auto;
+}
+
+.carousel .carousel-control .glyphicon {
+	font-size: 50px;	
+}
+.carousel .carousel-control .glyphicon {
+	margin-top: -25px;
+}
+
+
+/* posts */
+.featured-img {
+	padding-top: 12px;
+}
+article h2 {
+	padding-top: 0;
+}
+
+
+/* footer */
+footer ul.menu {
+	font-weight: bold;
+}
+footer ul.menu ul.sub-menu {
+	font-weight: normal;
+}
+footer ul.menu ul.sub-menu a {
+	color: #9db2b1;
+}
+footer ul.menu a:hover, footer ul.menu ul.sub-menu a:hover {
+	color: #d6e4e1;
+}
+
+
+/* musicians */
+.biosummary {
+	position: relative;
+}
+.biosummary img.attachment-thumbnail, .biosummary img.attachment-medium { 
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.biosummary .biotext {
+	margin-left: 166px;
+}
+	.biosummary .biotext.wideimg {
+		margin-left: 256px;
+	}
+
+@media (max-width: 640px) {
+	.biosummary img.attachment-thumbnail, .biosummary img.attachment-medium { position: static; margin-bottom: 16px; }
+	.biosummary .biotext, .biosummary .biotext.wideimg { margin-left: 0; }
+}
+
+
+/* misc */
+.brand-note { display: none; }
+
+.feature .feature-icon {
+	color: #1d88a3;
+}
+
+.sidebar-right, .sidebar-left, .site-content,.entry-content, .entry-meta , article, span, a, p {
+	word-wrap: break-word;
+	word-break: auto;
+	-ms-word-wrap: break-word;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;	
+}
+
+.padding1rem { padding: 1rem; padding: 16px; }
+.paddinghoriz1rem { padding: 0 1rem; padding: 0 16px; }
+
+.nomargintop { margin-top: 0; }
+.nomarginbottom { margin-bottom: 0; }
+.marginbottom1rem { margin-bottom: 16px; margin-bottom: 1rem; }
+
+.left { float: left; }
+.right { float: right; }
+
+.cf:before, .cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+
+@media (max-width: 768px) {
+	#main-container {
+		font-size: 14px;
+	}
+}
